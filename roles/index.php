@@ -53,7 +53,8 @@ while($nb_userT=$nb_user->fetch()){
 }
 
 ############################
-$nb_admin=$bdd->query('SELECT count(*) as TOTAL_ADMIN , name from USER us join ROLE ro on us.id=ro.id where name="admin"');
+$nb_admin=$bdd->query('SELECT count(*) as TOTAL_ADMIN , name from USER us join ROLE ro on us.idrole=ro.id where name="admin" group by name
+');
 $nb_admin->execute();
 while($nb_adminA=$nb_admin->fetch()){
 	echo "<table><tr><td>NbRole : ";
