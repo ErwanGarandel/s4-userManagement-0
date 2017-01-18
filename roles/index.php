@@ -31,6 +31,17 @@ echo $donnees['name']."</td><tr>";
 echo "</table><br/>";
 }
 $retour_name->closeCursor(); 
+
+ #########################
+
+$retour_nb_user=$bdd->query('SELECT count(*) as TOTAL from ROLE');
+$retour_nb_user->execute();
+while($nb_user=$retour_nb_user->fetch()){
+	echo "<table><tr><td>NBUSER : ";
+	echo $nb_user['TOTAL']."</td></tr></table>";
+}
+
+echo "$nb_user";
 ?>
 </body>
 </html>
