@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+	<link rel="stylesheet" type="text/css" href="sheet.css" 
+</head>
+<body>
 <?php
 try
 {
@@ -11,20 +18,21 @@ catch(Exception $e)
         die('Erreur : '.$e->getMessage());
 }
 
-echo "test<br/>";
-/*$array = array("foo", "bar", "hello", "world");
-var_dump($array);
- #######################*/
+ #######################
 $retour_name=$bdd->query('SELECT * from ROLE');
 
 //$retour_name->execute();
 //$donnees = $retour_name ->fetch();
 while($donnees = $retour_name->fetch())
 {
-echo "Nom : ";
-echo $donnees['name'];
-echo "<br />";
+echo "<table><tr><td>Nom : ";
+echo "";
+echo $donnees['name']."</td><tr>";
+echo "</table><br/>";
 }
 $retour_name->closeCursor(); 
-
 ?>
+</body>
+</html>
+
+
