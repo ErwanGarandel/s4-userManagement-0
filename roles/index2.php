@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Affichage</title>
+	<title>Index</title>
 	<link rel="stylesheet" type="text/css" href="sheet.css" >
 </head>
 <body>
